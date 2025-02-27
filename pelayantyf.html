@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Fellowship</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+     .form-container {
+            max-width: 100%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #00408C;
+            color: white;
+            padding: 15px;
+            border-radius: 0px 0px 5px 5px;
+        }
+        .btn-primary {
+            background-color: #00408C;
+            border: none;
+            padding: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #0b3c85;
+        }
+      .logo-footer {
+        width: 100px;
+        height: auto;
+      }
+
+      footer {
+        height: 300px;
+        font-size: 14px;
+        background-color: #1a1a1a;
+      }
+      .footer-copyright {
+        display: flex;
+        margin-top: 60px;
+        justify-content: center;
+        height: 50px;
+        background-color: #313131;
+      }
+
+      @media (max-width: 992px) {
+        .maps {
+          margin-top: 70px;
+        }
+        .footer-copyright {
+          display: flex;
+          margin-top: 0px;
+          justify-content: center;
+          height: 70px;
+          background-color: #313131;
+        }
+      }
+      @media (max-width: 768px) {
+        footer {
+          height: 700px;
+          font-size: 14px;
+          background-color: #1a1a1a;
+        }
+        .footer-copyright {
+          display: flex;
+          margin-top: 100px;
+          justify-content: center;
+          height: 70px;
+          background-color: #313131;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./Image/logo.png" alt="Logo" height="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link me-md-3" href="tyfalfaomega.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link me-md-3" href="#">Jadwal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pelayan</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header text-white">
+        <h5>Form Pendaftaran Pelayan</h5>
+        <p>Bagi anda yang mau menjadi pelayan Tuhan di Tabernakel Youth Fellowship silahkan isi form pendaftaran di bawah ini</p>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nama" class="form-label">Nama<label class="text-danger">*</label></label>
+                        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nohp" class="form-label">No Handphone<label class="text-danger">*</label></label>
+                        <input type="text" class="form-control" id="nohp" placeholder="Masukkan nomor handphone" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat<label class="text-danger">*</label></label>
+                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pelayanan" class="form-label">Pelayanan<label class="text-danger">*</label></label>
+                    <input type="text" class="form-control" id="pelayanan" placeholder="Masukkan jenis pelayanan" required>
+                </div>
+                <div class="mb-3">
+                    <label for="keterangan" class="form-label">Keterangan<label class="text-danger">*</label></label>
+                    <textarea class="form-control" id="keterangan" rows="4" placeholder="Tuliskan keterangan tambahan" required></textarea>
+                    <small class="text-danger">*Keterangan merupakan alasan kenapa ingin pelayanan dibidang tersebut.</small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <footer class="footer text-light py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
+            <img
+              src="./Image/logo.png"
+              alt="GBT ALFA OMEGA"
+              class="logo-footer"
+            />
+          </div>
+
+          <!-- Hubungi Kami & Media -->
+          <div class="col-md-5 text-center text-md-start">
+            <h5 class="fw-bold">HUBUNGI KAMI</h5>
+            <p class="m-0">Telephone</p>
+            <p class="m-0">Email</p>
+            <h5 class="fw-bold mt-3">MEDIA</h5>
+            <p class="m-0">Instagram</p>
+            <p class="m-0">Youtube</p>
+            <p class="m-0">Facebook</p>
+          </div>
+
+
+
+          <div class="maps col-md-4 text-center text-md-end">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8329.119336741998!2d112.93991378853949!3d-2.5390042007364726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de2be4ab832aca7%3A0x8170a2f6bc43f20b!2sGereja%20Beth-el%20Tabernakel%20Alfa%20Omega!5e1!3m2!1sid!2sid!4v1738916036611!5m2!1sid!2sid"
+              width="100%"
+              height="150"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="text-center mt-3">
+          <p class="mt-0">
+            Copyright © 2025. Gereja GBT ALFA OMEGA SAMPIT. Developed by Jerry
+            Grou
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

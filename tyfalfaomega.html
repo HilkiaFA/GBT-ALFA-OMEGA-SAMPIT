@@ -54,6 +54,21 @@
         font-weight: bold;
       }
 
+      .custom-btn {
+            width: 200px;
+            height: 150px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .blue-bg { background-color: #002f6c; }
+        .yellow-bg { background-color: #f4b400; color: black; }
+        .custom-btn img { width: 50px; margin-bottom: 10px; }
       .logo-footer {
         width: 100px;
         height: auto;
@@ -84,11 +99,11 @@
           background-color: #313131;
         }
         .blue-section {
-        background: #1e3a8a;
-        color: white;
-        height: 540px;
-        padding: 40px 20px;
-      }
+          background: #1e3a8a;
+          color: white;
+          height: 540px;
+          padding: 40px 20px;
+        }
       }
       @media (max-width: 768px) {
         footer {
@@ -111,20 +126,20 @@
           max-width: 100%;
         }
         .blue-section {
-        background: #1e3a8a;
-        color: white;
-        height: 700px;
-        padding: 40px 20px;
-      }
+          background: #1e3a8a;
+          color: white;
+          height: 700px;
+          padding: 40px 20px;
+        }
       }
 
       @media (max-width: 398px) {
         .blue-section {
-        background: #1e3a8a;
-        color: white;
-        height: 800px;
-        padding: 40px 20px;
-      }
+          background: #1e3a8a;
+          color: white;
+          height: 800px;
+          padding: 40px 20px;
+        }
       }
     </style>
   </head>
@@ -147,9 +162,9 @@
           id="navbarNav"
         >
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Jadwal</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Informasi</a></li>
+            <li class="nav-item"><a class="nav-link me-md-3" href="#">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link me-md-3" href="#">Jadwal</a></li>
+            <li class="nav-item"><a class="nav-link" href="pelayantyf.html">Pelayan</a></li>
           </ul>
         </div>
       </div>
@@ -260,6 +275,35 @@
         </div>
       </div>
     </div>
+    
+    <div class="container text-center mt-5">
+      <div class="row justify-content-center text-center">
+          <div class="col-6 col-md-3 d-flex justify-content-center mb-3">
+              <div class="custom-btn blue-bg">
+                  <img src="Image/icon/birthday_cake_icon_144494.png"/>
+                  Ulang Tahun
+              </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex justify-content-center mb-3">
+              <div class="custom-btn yellow-bg text-white">
+                  <img src="Image/icon/motivation.png"/>
+                  Kata - Kata<br>Penyemangat
+              </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex justify-content-center mb-3">
+              <div class="custom-btn blue-bg text-white">
+                  <img src="Image/icon/suggestion.png"/>
+                  Masukan & Saran
+              </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex justify-content-center mb-3">
+              <div class="custom-btn yellow-bg text-white">
+                  <img src="Image/icon/pray.png"/>
+                  Pokok Doa
+              </div>
+          </div>
+      </div>
+  </div>
 
     <footer class="footer text-light py-5">
       <div class="container">
@@ -284,6 +328,8 @@
             <p class="m-0">Facebook</p>
           </div>
 
+
+
           <div class="maps col-md-4 text-center text-md-end">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8329.119336741998!2d112.93991378853949!3d-2.5390042007364726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de2be4ab832aca7%3A0x8170a2f6bc43f20b!2sGereja%20Beth-el%20Tabernakel%20Alfa%20Omega!5e1!3m2!1sid!2sid!4v1738916036611!5m2!1sid!2sid"
@@ -306,6 +352,7 @@
         </div>
       </div>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
