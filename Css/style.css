@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+.montserrat-Bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 25px;
+    color: #00408c;
+    font-style: normal;
+  }
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 96px;
+    font-style: normal;
+  }
 .visi-misi {
     margin-top: 20px;
     height: 600px;
@@ -89,6 +108,37 @@ body {
     color: gray;
 }
 
+.parallax {
+    background-image: url('../Image/Screenshot\ 2025-03-03\ 093202.png');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.parallax h1 {
+    font-size: 80px;
+    font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.parallax p {
+    font-size: 60px;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-variation-settings:
+      "wdth" 100;
+}
 .logo-footer {
     width: 100px;
     height: auto;
@@ -115,6 +165,7 @@ footer {
     .section-2{
         background-color: #00408c;
         width: 100%;
+        margin-top: 330px;
         height: 700px;
     }
     .maps{
