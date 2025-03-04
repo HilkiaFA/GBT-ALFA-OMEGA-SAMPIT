@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+      .blue-section {
+        background-image: url('../Image/download.webp');
+        color: black;
+        height: 400px;
+        padding: 40px 20px;
+        background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;      }
+      .blue-section .content {
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: space-between;
+      }
+      .blue-section img {
+        width: 300px;
+        height: 300px;
+        margin-top: 60px;
+        margin-bottom: 15px;
+      }
+      .text-content-title{
+          font-family: "Montserrat", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 700;
+          font-size: 36px;
+          font-style: normal;
+      
+      }
+      .blue-section .text-content {
+        max-width: 60%;
+        margin-top: 60px;
+        color: black;
+      }
+      .gallery-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .gallery img {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 15px;
+        display: inline-block;
+      }
+      .see-more {
+        text-align: right;
+        margin-top: 10px;
+      }
+      .see-more a {
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .parallax {
+    background-image: url('../Image/Screenshot\ 2025-03-03\ 093202.png');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.parallax h1 {
+    font-size: 130px;
+    font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.parallax p {
+    font-size: 60px;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-variation-settings:
+      "wdth" 100;
+}
+      .custom-btn {
+        width: 200px;
+        height: 150px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      .blue-bg {
+        background-color: #002f6c;
+      }
+      .yellow-bg {
+        background-color: #f4b400;
+        color: black;
+      }
+      .custom-btn img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .logo-footer {
+        width: 100px;
+        height: auto;
+      }
+
+      footer {
+        height: 300px;
+        font-size: 14px;
+        background-color: #1a1a1a;
+      }
+      .footer-copyright {
+        display: flex;
+        margin-top: 60px;
+        justify-content: center;
+        height: 50px;
+        background-color: #313131;
+      }
+
+      @media (max-width: 992px) {
+        .maps {
+          margin-top: 70px;
+        }
+        .footer-copyright {
+          display: flex;
+          margin-top: 0px;
+          justify-content: center;
+          height: 70px;
+          background-color: #313131;
+        }
+        .blue-section {
+          color: black;
+          height: 540px;
+          padding: 40px 20px;
+        }
+      }
+      @media (max-width: 768px) {
+        footer {
+          height: 700px;
+          font-size: 14px;
+          background-color: #1a1a1a;
+        }
+        .footer-copyright {
+          display: flex;
+          margin-top: 100px;
+          justify-content: center;
+          height: 70px;
+          background-color: #313131;
+        }
+        .blue-section .content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .blue-section .text-content {
+          max-width: 100%;
+        }
+        .blue-section {
+          color: black;
+          height: 700px;
+          padding: 40px 20px;
+        }
+      }
+
+      @media (max-width: 398px) {
+        .blue-section {
+          color: black;
+          height: 800px;
+          padding: 40px 20px;
+        }
+      }

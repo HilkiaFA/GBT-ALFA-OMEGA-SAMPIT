@@ -147,7 +147,7 @@ body {
     font-weight: bold;
 }
 .parallax h1 {
-    font-size: 80px;
+    font-size: 130px;
     font-family: "Tourney", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -162,6 +162,7 @@ body {
     font-variation-settings:
       "wdth" 100;
 }
+
 .logo-footer {
     width: 100px;
     height: auto;
