@@ -77,20 +77,46 @@ body {
     height: 550px;
 }
 .highlight-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 10px;
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap; /* Mencegah wrapping ke bawah */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling di iOS */
 }
+
+/* Menyusun elemen dalam satu baris */
 .highlight {
-    display: inline-flex;
-    gap: 25px;
+    display: flex;
+    gap: 15px; /* Jarak antar gambar */
+    padding-bottom: 10px; /* Spasi bawah agar tidak terpotong */
 }
+
+/* Styling untuk gambar */
+.highlight a {
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+
 .highlight img {
-    width: auto;
-    height: 300px;
+    width: 350px; /* Atur ukuran sesuai gambar di screenshot */
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover; /* Menyesuaikan ukuran gambar */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Scrollbar Custom */
+.highlight-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.highlight-container::-webkit-scrollbar-thumb {
+    background: #888;
     border-radius: 10px;
 }
 
+.highlight-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 .footer{
     background-color: #1A1A1A;
 }

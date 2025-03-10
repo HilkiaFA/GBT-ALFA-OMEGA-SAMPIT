@@ -1,3 +1,10 @@
+<?php 
+include 'koneksi.php';
+$sql = "SELECT Nama, Judul, Ringkasan FROM ringkasankhotbah";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
@@ -8,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./Css/styleKomsel.css" />
+    <link rel="stylesheet" href="./Css/styleringkasan.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
@@ -32,8 +39,8 @@
             <li class="nav-item">
               <a class="nav-link" href="index.php">Beranda</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Renungan</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Ringkasan Khotbah</a></li>
+            <li class="nav-item"><a class="nav-link" href="galerigbt.php">Galeri</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Tentang Kami</a>
             </li>
@@ -42,47 +49,15 @@
       </div>
     </nav>
 
-    <!-- Section Visi & Misi -->
-    <section class="visi-misi">
-      <div class="container">
-        <div class="text-center">
-          <img
-            src="./Image/GBT ALFAOMEGA PNG.png"
-            alt="Ibadah"
-            class="img-fluid rounded"
-          />
-        </div>
-        <div class="row align-items-center">
-          <div class="text-center">
-            <h2 class="fw-bold mt-4">Komunitas Sel</h2>
-            <p class="mt-3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry’s standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pastor Section -->
-    <div class="section-2"></div>
-
-    <div class="container text-center py-5">
-      <h2 class="fw-bold">Jadwal Komunitas Sel</h2>
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-4 col-sm-6 d-flex justify-content-center mb-4">
-          <div class="custom-card">
-            <h5 class="fw-bold">Senin</h5>
-            <img src="./Image/logo.png" alt="TYF Tabernakel Youth Fellowship" />
-            <p class="text-muted">18:00</p>
-            <p class="small text-muted">Di Gereja GBT ALFA OMEGA</p>
-          </div>
-        </div>
-      </div>
+    <div class="article-container">
+        <?php if ($row): ?>
+            <h2 class="article-title"> <?php echo htmlspecialchars($row['Judul']); ?> </h2>
+            <p class="article-author"> <?php echo htmlspecialchars($row['Nama']); ?> </p>
+            <p class="article-content"> <?php echo nl2br(htmlspecialchars($row['Ringkasan'])); ?> </p>
+        <?php else: ?>
+            <h2 class="article-title">Ringkasan Tidak Ditemukan</h2>
+            <p class="article-content">Maaf, Ringkasan Belum tersedia saat ini.</p>
+        <?php endif; ?>
     </div>
 
     <!-- Footer -->
