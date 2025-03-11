@@ -15,12 +15,11 @@ body {
 }
 
 .article-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .article-title {
     font-weight: bold;
