@@ -165,7 +165,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="proses_ucapan.php" method="POST">
+                            <form action="proses_ucapan.php?id=<?php echo $row['id']; ?>" method="POST">
                                 <input type="hidden" name="id_ulangtahun" value="<?php echo $row['id']; ?>">
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama</label>

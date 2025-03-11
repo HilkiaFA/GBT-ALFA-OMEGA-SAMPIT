@@ -114,7 +114,7 @@
                 id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link me-md-3" href="tyfalfaomega.html">Beranda</a>
+                        <a class="nav-link me-md-3" href="Tabernakelyouthfellowship.html">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-md-3" href="#">Jadwal</a>
