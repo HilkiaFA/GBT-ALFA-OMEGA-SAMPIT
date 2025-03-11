@@ -3,13 +3,13 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Buttons - Kaiadmin Bootstrap 5 Admin Dashboard</title>
+  <title>GBT ALFA OMEGA SAMPIT - Admin Dashboard</title>
   <meta
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     name="viewport" />
-  <link
+    <link
     rel="icon"
-    href="../assets/img/kaiadmin/favicon.ico"
+    href="../../Image/logo.png"
     type="image/x-icon" />
 
   <!-- Fonts and icons -->
@@ -38,8 +38,6 @@
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../assets/css/kaiadmin.min.css" />
-
-  <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../assets/css/demo.css" />
 </head>
 
@@ -51,11 +49,12 @@
         <!-- Logo Header -->
         <div class="logo-header" data-background-color="dark">
           <a href="../index.html" class="logo">
-            <img
-              src="../assets/img/kaiadmin/logo_light.svg"
-              alt="navbar brand"
-              class="navbar-brand"
-              height="20" />
+          <img
+          src="../../Image/logo.png"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="50"
+              />
           </a>
           <div class="nav-toggle">
             <button class="btn btn-toggle toggle-sidebar">
