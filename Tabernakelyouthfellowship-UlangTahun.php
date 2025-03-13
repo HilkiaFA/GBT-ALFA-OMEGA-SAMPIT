@@ -134,6 +134,7 @@
             $dob = new DateTime($row['date']);
             $today = new DateTime();
             $age = $today->diff($dob)->y;
+            $encoded_id = $row['id'];
             ?>
             <div class="col-md-6">
                 <div class="card d-flex flex-row align-items-center p-3">
@@ -150,8 +151,8 @@
                             <a><?php echo strftime("%d %B %Y", strtotime($row['date'])); ?></a><br><br>
                             <a href="#" class="btn-link" data-bs-toggle="modal" data-bs-target="#ucapanModal-<?php echo $row['id']; ?>">Berikan Ucapan</a>
                             |
-                            <a href="halaman_ucapan.php?id=<?php echo $row['id']; ?>" class="btn-link">Lihat Ucapan</a>
-                        </div>
+                            <a href="halaman_ucapan.php?id=<?php echo encryptID($row['id']); ?>" class="btn-link">Lihat Ucapan</a>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -165,7 +166,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="proses_ucapan.php?id=<?php echo $row['id']; ?>" method="POST">
+                            <form action="proses_ucapan.php?id=<?php echo encryptID($row['id']); ?>" method="POST">
                                 <input type="hidden" name="id_ulangtahun" value="<?php echo $row['id']; ?>">
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama</label>

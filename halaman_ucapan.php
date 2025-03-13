@@ -1,3 +1,14 @@
+<?php 
+        include 'koneksi.php';
+if (isset($_GET['id'])) {
+    $id = decryptID($_GET['id']);
+    if (!$id) {
+        die("ID tidak valid!");
+    }
+} else {
+    die("ID tidak ditemukan!");
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -127,9 +138,6 @@
 
     <div class="container mt-4">
         <?php
-        include 'koneksi.php';
-
-        $id = $_GET['id'];
         $query = "SELECT id, nama, deskripsi FROM ucapan WHERE idulangtahun=$id";
         $result = mysqli_query($conn, $query);
         ?>
