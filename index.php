@@ -72,7 +72,6 @@
   </div>
 
   <?php
-  $conn->close();
   ?>
 
 
@@ -182,7 +181,6 @@
     <div class="highlight-container mt-5">
         <div class="highlight">
             <?php
-            include 'koneksi.php';
             $sql = "SELECT imgpath, link FROM sorotan";
             $result = mysqli_query($conn, $sql);
 
