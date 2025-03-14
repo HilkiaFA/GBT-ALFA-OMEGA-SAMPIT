@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="Image/logo.png">
@@ -74,6 +75,21 @@
   <?php
   ?>
 
+  <div class="event-section">
+    <span class="event-header">Ibadah Raya yang akan datang</span>
+    <h2 class="event-title">Ikuti Ibadah Raya berikutnya.</h2>
+    <p class="event-info">
+      ⏳ Minggu 16/03/2025 08:00 AM &nbsp; 📍 JL. Ahmad Yani No 12 &nbsp; 👤 Ps Onisimus Purnama, S.H., M.Th.
+    </p>
+
+    <div class="countdown-container">
+      <div class="countdown-box"><span id="weeks">00</span> Minggu</div>
+      <div class="countdown-box"><span id="days">00</span> Hari</div>
+      <div class="countdown-box"><span id="hours">00</span> Jam</div>
+      <div class="countdown-box"><span id="minutes">00</span> Menit</div>
+      <div class="countdown-box"><span id="seconds">00</span> Detik</div>
+    </div>
+  </div>
 
   <!-- Section Visi & Misi -->
   <section class="visi-misi mt-3">
@@ -88,13 +104,13 @@
             Pelayanan
           </a>
         </div>
-        <div class="col-lg-6 text-center mt-4"> 
-            <img
-              src=" ./Image/GBT ALFAOMEGA PNG.png"
-          alt="Ibadah"
-          class="img-fluid rounded" />
+        <div class="col-lg-6 text-center mt-4">
+          <img
+            src=" ./Image/GBT ALFAOMEGA PNG.png"
+            alt="Ibadah"
+            class="img-fluid rounded" />
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -176,32 +192,51 @@
     <p>Getting Better Together</p>
   </div>
 
-  <div class="container mt-5">
-    <h3 class="fw-bold montserrat-Bold-sorotan">Sorotan</h3>
-    <div class="highlight-container mt-5">
-        <div class="highlight">
-            <?php
-            $sql = "SELECT imgpath, link FROM sorotan";
-            $result = mysqli_query($conn, $sql);
+  <section class="news-section mt-5">
+    <div class="container">
+      <h3 class="fw-bold montserrat-Bold-sorotan mb-5">Sorotan</h3>
+      <div class="news-container">
+        <?php
+        include_once 'koneksi.php';
+        $sql = "SELECT * FROM sorotan";
+        $result = mysqli_query($conn, $sql);
 
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<a href="' . htmlspecialchars($row["link"]) . '" target="_blank">
-                            <img src="Assets/Sorotan/' . htmlspecialchars($row["imgpath"]) . '" alt="Sorotan" class="img-fluid" />
-                          </a>';
-                }
-            } else {
-                echo "<p>No highlights found</p>";
-            }
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo '<a class="text-decoration-none  " href="' . htmlspecialchars($row["link"]) . '" target="_blank">
+            <div class="card">
+                                    <img src="Assets/Sorotan/' . htmlspecialchars($row["imgpath"]) . '" alt="Sorotan" class="img-fluid" />
+                                <div class="card-body">
+                                  <p class="card-meta">
+                                  </p>
+                                  <h5 class="card-title font-fredoka">' . htmlspecialchars($row["Nama"]) . '</h5>
+                                </div>
+                          </div>
+                                    </a>';
+          }
+        } else {
+          echo "<p>No highlights found</p>";
+        }
 
-            mysqli_close($conn);
-            ?>
-        </div>
+        mysqli_close($conn);
+        ?>
+      </div>
     </div>
-</div>
+  </section>
+
+  <section class="hero-section d-flex align-items-center justify-content-center mt-5">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h2 class="font-fredoka fw-bold">Daftar Jemaat<br>GBT ALFA OMEGA SAMPIT</h2>
+      <p class="fredoka-regular mt-4">Lorem ipsum dolor sit amet consectetur. Senectus tellus eget nunc posuere quis at vitae consequat. At nulla erat nisi nunc. Sit risus sagittis pellentesque eget convallis commodo. Sit pellentesque dolor neque a diam malesuada.</p>
+      <button class="btn-custom fredoka-regular mt-4">Daftar Jemaat</button>
+    </div>
+  </section>
+
+
 
   <!-- Footer -->
-  <footer class="footer text-light py-5 mt-5">
+  <footer class="footer text-light py-5 ">
     <div class="container">
       <div class="row align-items-center">
         <!-- Logo -->
@@ -250,6 +285,40 @@
     if (!window.location.pathname.endsWith("/index.php")) {
       window.location.href = window.location.pathname + "index.php";
     }
+  </script>
+  <script>
+    function getNextSundayAt8AM() {
+      let now = new Date();
+      let nextSunday = new Date();
+      nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
+      nextSunday.setHours(8, 0, 0, 0); 
+
+      if (now > nextSunday) {
+        nextSunday.setDate(nextSunday.getDate() + 7);
+      }
+      return nextSunday;
+    }
+
+    function updateCountdown() {
+      let now = new Date();
+      let targetTime = getNextSundayAt8AM();
+      let diff = targetTime - now;
+
+      let weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
+      let days = Math.floor((diff % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("weeks").textContent = weeks.toString().padStart(2, '0');
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
 </body>
 
