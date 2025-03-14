@@ -9,7 +9,8 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./Css/style.css" />
 </head>
 
 <body>
@@ -79,7 +80,7 @@
     <span class="event-header">Ibadah Raya yang akan datang</span>
     <h2 class="event-title">Ikuti Ibadah Raya berikutnya.</h2>
     <p class="event-info">
-      ⏳ Minggu 16/03/2025 08:00 AM &nbsp; 📍 JL. Ahmad Yani No 12 &nbsp; 👤 Ps Onisimus Purnama, S.H., M.Th.
+    <i class="fa-solid fa-calendar-days" style="color: #ffffff;"></i> Minggu 16/03/2025 08:00 AM &nbsp; <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> JL. Ahmad Yani No 12 &nbsp; <i class="fa-regular fa-user" style="color: #ffffff;"></i> Ps Onisimus Purnama, S.H., M.Th.
     </p>
 
     <div class="countdown-container">
